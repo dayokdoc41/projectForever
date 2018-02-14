@@ -1,0 +1,28 @@
+<ion-content padding>
+  <div class="confirmation-container" [hidden]="!showConfirmation">
+    <p>In order to finish the story. You need to guess the right words below.</p>
+
+    <!-- <p><button> SPEAK </button></p> -->
+    <button ion-button round color="primary" (click)="sayMissingWords()" [hidden]="showStopButton">SPEAK</button>
+    <button ion-button round color="danger" (click)="stopSpeaking()" [hidden]="!showStopButton">STOP</button>
+    <!-- <p><button> HINT </button></p> -->
+    <button ion-button round color="secondary" (click)="provideHint()" [disabled]="disableHintButton" [hidden]="showStopButton">HINT ({{ hintCount }})</button>
+
+    <BR/><BR/><BR/><BR/>
+    <p class="final-words">{{ firstHintWord }}&nbsp;&nbsp;&nbsp;{{ missingWord }}&nbsp;&nbsp;&nbsp;{{ secondHintWord }}</p>
+  </div>
+  <div class="confirmed" [hidden]="!showConfirmed">
+    <h3>I LOVE YOU TOO!</h3>
+    <h2> AND </h2>
+    <h3> HAPPY VALENTINES DAY!! </h3>
+    <BR/><BR/><BR/>
+    <button ion-button round color="danger" (click)="endTheStory()">END STORY</button>
+  </div>
+
+  <div class="thank-you-container" [hidden]="!showThankYou">
+    <h5>HAPPY EVER AFTER BEGINS HERE</h5><BR/><BR/>
+    <img src="assets/imgs/forever.png"/><BR/><BR/>
+    <h3>THANK YOU!</h3>
+  </div>
+
+</ion-content>

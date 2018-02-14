@@ -1,0 +1,68 @@
+page-home {
+    text-align: center;
+    text-justify: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    .scroll-content {
+        color: #FFAAAA;
+        background-color: #AA3939;
+    }
+
+    .home-content {
+        margin-top: 45%;
+    }
+    
+    .home-content p {
+        font-size: 11px;
+    }
+
+    .button-begin {
+        width: 20%;
+        height: 50px;
+        top:50%;
+        position: relative;        
+        border-radius: 5px;
+        background: none;
+        cursor: pointer;
+        transition: background 0.5s ease;
+    }
+    
+    .button-begin:active {
+        background-color: #D46A6A;
+    }
+
+    .button-transform {
+        -webkit-transition: all .2s ease;  
+        -moz-transition: all .2s ease;  
+        -o-transition: all .2s ease;  
+        -ms-transition: all .2s ease;  
+        transition: all .2s ease;
+    }
+
+    .active#heart:before,.active#heart:after{
+        background: #801515 !important;
+    }
+    #heart {
+        width: 200px;
+        height: 180px;
+        transition: background 0.2s ease;
+    }
+    #heart:before,
+    #heart:after {
+        transition: background 0.2s ease;
+        position: absolute;
+        content: "";
+        top: 0;
+        width: 100px;
+        height: 160px;
+        background: dimgrey;
+        border-radius: 50px 50px 0 0;
+        transform: rotate(-45deg);
+        transform-origin: 0 100%;
+    }
+    #heart:after {
+        left: 0;
+        transform: rotate(45deg);
+        transform-origin :100% 100%;
+    }
+}

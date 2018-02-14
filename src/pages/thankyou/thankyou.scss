@@ -1,0 +1,32 @@
+page-thankyou {
+    text-align: center;
+    text-justify: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    .scroll-content {
+        color: #FFAAAA;
+        background-color: #AA3939;
+    }
+
+    .toolbar-background {
+        background-color: #801515;
+    }
+
+    .toolbar-title {
+        color: #FFCCCC;
+    }
+    .final-words {
+        color: #fff;
+        font-size: 24px;
+    }
+    .confirmation-container {
+        margin-top: 15%;
+    }
+    .confirmed {
+        margin-top: 25%;
+    }
+    .thank-you-container {
+        margin-top: 15%;
+    }
+
+}

@@ -1,0 +1,86 @@
+<ion-header [hidden]="!hideAvatar">
+  <ion-navbar>
+    <ion-title>BEST LOVE STORY</ion-title>
+  </ion-navbar>
+
+</ion-header>
+
+<ion-content padding>
+  <div class="agreement-content-1" [hidden]="hideAvatar">
+    <img class="author-avatar" src="assets/imgs/avatar.jpg">
+    <p>Do you know the person in the picture?</p>
+    <p>
+      <button class="agreement-btn" [ngClass]="{'btn-actv': isYes}" (click)="didKnow()" ion-button round>Yes</button>
+      <button class="agreement-btn" (click)="dontKnow()" ion-button round>No</button>
+    </p>
+  </div>
+
+  <div class="questionares-containter" [hidden]="!hideAvatar"> 
+    <ion-card>
+      <ion-card-content>
+      <p>
+          Would you do anything for him?
+      </p>
+      </ion-card-content >
+      <ion-row no-padding [hidden]="showQuestionTwo">
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start (click)="agreeQuestionOne()">
+            <ion-icon name='thumbs-up'></ion-icon> YES
+            </button>
+        </ion-col>
+          
+        <ion-col text-center>
+          <button ion-button clear small color="danger" icon-start (click)="disagreeQuestionOne()">
+          <ion-icon name='thumbs-down'></ion-icon> NO
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card [hidden]="!showQuestionTwo">
+      <ion-card-content>
+      <p>
+        Would you accept him with all of his flaws?
+      </p>
+      </ion-card-content>
+      <ion-row no-padding [hidden]="showQuestionThree">
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start (click)="agreeQuestionTwo()">
+            <ion-icon name='thumbs-up'></ion-icon>
+            YES
+          </button>
+        </ion-col>
+          
+        <ion-col text-center>
+          <button ion-button clear small color="danger" icon-start (click)="disagreeQuestionTwo()">
+            <ion-icon name='thumbs-down'></ion-icon>
+            NO
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+
+    <ion-card [hidden]="!showQuestionThree">
+      <ion-card-content>
+      <p>
+        Would you agree if he asked you to be his official girlfriend?
+      </p>
+      </ion-card-content>
+      <ion-row no-padding [hidden]="showProceedButton">
+        <ion-col>
+          <button ion-button clear small color="danger" icon-start  (click)="agreeQuestionThree()">
+          <ion-icon name='thumbs-up'></ion-icon> YES 
+          </button>
+          
+        </ion-col>
+          <ion-col text-center>
+            <button ion-button clear small color="danger" icon-start (click)="disagreeQuestionThree()">
+            <ion-icon name='thumbs-down'></ion-icon> NO
+          </button>
+        </ion-col>
+      </ion-row>
+    </ion-card>
+    <br/><br/>
+    <button ion-button block class="procced-btn" [hidden]="!showProceedButton" (click)="proceed()">Proceed</button>
+  </div>
+</ion-content>

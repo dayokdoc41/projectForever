@@ -1,0 +1,73 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>BEST LOVE STORY</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<ion-content padding>
+  <ion-slides pager>
+
+    <ion-slide>
+      <!-- <ion-toolbar>
+        <ion-buttons end>
+          <button ion-button color="primary">Skip</button>
+        </ion-buttons>
+      </ion-toolbar> -->
+      <img class="img-1st" src="assets/imgs/1st.png">
+      <h3>Once upon a time, there was a boy who by chance run across a girl.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img class="img-2nd" src="assets/imgs/2nd.png">
+      <h3>They were on the same company as co-employees, then later became friends.</h3>
+    </ion-slide>
+
+    <ion-slide>
+        <img class="img-1st" src="assets/imgs/3rd.png">
+      <h3>Days, weeks, years have passed and the friendship is getting strong and deep.</h3>
+    </ion-slide>
+
+    <ion-slide>
+        <img class="img-4th" src="assets/imgs/4th.jpg">
+      <h3>The boy secretly fall in love with the girl, but cannot profess his feelings towards the girl.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/5th.png">
+      <h3>He is afraid that the friendship might end if he confess how he feels.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/6th.png">
+        <h3>Also, the girl is in a long term relationship with someone else.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/7th.png">
+      <h3>More years have passed and the boy decided to look for some else.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/8th.png">
+      <h3>Not knowing that the girl feels the seem way as he do.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/9th.png">
+      <h3>By good fortune, the boy re-consider his decision.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <img src="assets/imgs/10th.png">
+      <h3>He then decided to tell the girl everything and the girl accepted the boy.</h3>
+    </ion-slide>
+
+    <ion-slide>
+      <h3>Do you want to continue the story?</h3>
+      <p><button class="agreement-btn" [ngClass]="{'btn-actv': isYes}" (click)="accepted()" ion-button round>Yes</button><button class="agreement-btn" [ngClass]="{'btn-actv': isNo}" (click)="disaccept()" [disabled]="isNo" ion-button round>No</button></p>
+    </ion-slide>
+
+
+  </ion-slides>
+</ion-content>

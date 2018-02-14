@@ -1,0 +1,44 @@
+page-agreement {
+    text-align: center;
+    text-justify: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    .scroll-content {
+        color: #FFAAAA;
+        background-color: #AA3939;
+    }
+
+    .toolbar-background {
+        background-color: #801515;
+    }
+
+    .toolbar-title {
+        color: #FFCCCC;
+    }
+
+    .agreement-content-1 {
+        margin-top: 30%;
+    }
+    .author-avatar {
+        border-radius: 50%;
+        width: 80%;;
+    }
+
+    .agreement-btn {
+        background: dimgrey;
+    }
+    .btn-actv {
+        background: #801515 !important;
+    }
+
+    .questionares-containter {
+        margin-top: 20%;
+    }
+
+    .procced-btn {
+        background:  #FFCCCC !important;
+        color: #801515;
+        width: 85%;
+        margin: 0 auto;
+    }
+}

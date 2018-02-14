@@ -1,0 +1,38 @@
+page-story {
+    text-align: center;
+    text-justify: auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    .scroll-content {
+        color: #FFAAAA;
+        background-color: #AA3939;
+    }
+
+    .toolbar-background {
+        background-color: #801515;
+    }
+
+    .toolbar-title {
+        color: #FFCCCC;
+    }
+
+    .swiper-pagination-bullet-active {
+        background: #FFCCCC;
+    }
+
+    .img-1st {
+        height: 300px;
+    }
+    .img-4th {
+        width: 300px;
+        height: 250px;
+    }
+    .agreement-btn {
+        background: dimgrey;
+    }
+    .btn-actv {
+        background: #801515 !important;
+    }
+
+
+}
