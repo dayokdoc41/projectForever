@@ -38,7 +38,7 @@ export class StoryPage {
     this.showLoading("");
     setTimeout( () => {
       this.app.getRootNav().setRoot(AgreementPage);
-    }, 300);
+    }, 1000);
 
 
   }
@@ -46,8 +46,8 @@ export class StoryPage {
   disaccept(): void {
     this.isNo = true;
     let alert = this.alertCtrl.create({
-      title: 'The Best Love Story',
-      subTitle: 'You cannot miss the best love story ever.',
+      title: 'The Greatest Love Story',
+      subTitle: 'You cannot miss the greatest love story ever.',
       buttons: ['OK']
     });
     alert.present();

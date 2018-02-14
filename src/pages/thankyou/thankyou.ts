@@ -79,31 +79,35 @@ export class ThankyouPage {
     this.speechRecognition.stopListening();
     //process word;
     this.showStopButton = false;
-    console.log('Processing words');
-    
-
   }
 
   startListening(): void {
     this.speechRecognition.startListening(this.options)
       .subscribe(
         (matches: Array<string>) => {
-          console.log(matches);
-          console.log("say something");
-          let matchword1 = /i love you/gi;
-          let matchword2 = /love/gi;
-
-          for(let words in matches){
-            if (words.toString().toLowerCase() === 'i love you' ) {
-              console.log("alright");
+          let didFoundMissingWords: boolean = false;
+          for(let words of matches){
+            if (words.toString().toLowerCase() === 'i love you') {
+              didFoundMissingWords = true;
             } 
             else if (words.toString().toLowerCase() === 'love'){
-              console.log("alright but not yet");
+              if (this.hintCount === 0) {
+                didFoundMissingWords = true;
+              }
             }
             else {
-              console.log("ohnoes");
+              // do nothing for now
             }
           }
+          
+
+          if(didFoundMissingWords) {
+            this.showSuccessAlert();
+          } 
+          else {
+            this.showErrorAlert('You did not guess the right words. Please try again.');
+          }
+
           this.capturedWords = matches;
         },
         (onerror) => {
@@ -114,10 +118,28 @@ export class ThankyouPage {
 
   showErrorAlert(message: string): void{
     let alert = this.alertCtrl.create({
-      title: "ERROR!",
+      title: "The Greatest Love Story",
       subTitle: message,
       buttons: ["DISMISS"]      
     })
+    alert.present();
+  }
+
+  showSuccessAlert(): void {
+    let alert = this.alertCtrl.create({
+      title: 'The Greatest Love Story',
+      subTitle: 'CONGRATULATIONS!',
+      message: 'You have said the right words!',
+      buttons: [
+        {
+          text: 'OK',
+          handler: () => {
+            this.showConfirmed = true;
+            this.showConfirmation = false;
+          }
+        }
+      ]
+    });
     alert.present();
   }
 
